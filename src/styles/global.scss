@@ -1,0 +1,12 @@
+@use "./variables" as g;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Text", serif;
+}
+
+body {
+  background-color: g.$rose50;
+}
