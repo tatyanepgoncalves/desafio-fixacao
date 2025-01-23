@@ -1,6 +1,8 @@
 @use "./variables" as g;
+@forward "./product-group.scss";
 
-* {
+
+*  {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -10,3 +12,16 @@
 body {
   background-color: g.$rose50;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  .container {
+    width: 90vw;
+  }
+}
+

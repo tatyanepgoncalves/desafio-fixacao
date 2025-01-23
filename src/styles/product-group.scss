@@ -1,0 +1,154 @@
+@use "./_variables.scss" as p;
+
+.main-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-group {
+  display: grid;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.product-image {
+  img,
+  source {
+    width: 100%;
+  }
+}
+
+
+
+.product-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  span {
+    color: p.$rose500;
+  }
+
+  h1 {
+    color: p.$rose900;
+  }
+
+  p {
+    color: p.$red;
+    font-weight: 600;
+  }
+}
+
+.btns {
+  position: absolute;
+
+  .btn-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.btn-add {
+  background-color: #fff;
+  border: 1px solid p.$rose900;
+  transition: border .3s;
+
+  p {
+    color: p.$rose900;
+    font-weight: 600;
+  }
+
+  &:hover {
+    border: 1.5px solid p.$red;
+
+    p {
+      color: p.$red;
+    }
+  }
+}
+
+.controls {
+  background-color: p.$red;
+  color: #fff;
+  
+  button {
+    background-color: transparent;
+  }
+}
+
+@media (width >= 992px) {
+  .product-group {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .product-item {
+    width: 300px;
+    gap: 15px;
+  }
+
+  .product-image {
+    img,
+    source {
+      border-radius: 10px;
+    }
+  }
+
+  .product-text {
+    margin-top: 20px;
+    span,
+    p {
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 16px;
+    }
+  }
+
+  .btns {
+    left: 65px;
+    bottom: 85px;
+
+    .btn-add,
+    .controls {
+      width: 170px;
+      height: 40px;
+      border-radius: 30px;
+      padding: 0 15px;
+    }
+
+    .controls {
+      button {
+        border: 1px solid #fff;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+}

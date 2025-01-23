@@ -1,0 +1,27 @@
+@use "./variables" as c;
+
+main {
+  h1 {
+    margin: 20px 0;
+    font-size: 35px;
+    line-height: 100%;
+  }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.product-box {
+  img {
+    width: 200px;
+  }
+}
+
+.product-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
